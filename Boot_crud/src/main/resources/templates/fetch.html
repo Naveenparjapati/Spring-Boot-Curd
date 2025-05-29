@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- <div align="center">
+
+		<h1>Student name</h1>
+		<hr>
+		<div th:each="s:${student}">
+			<h2 th:text="'Name: '+${s.name}"></h2>
+			<h2 th:text="'Mobile: '+${s.mobile}"></h2>
+			<h2 th:text="'Email : '+${s.email}"></h2>
+			<h2 th:text="'Percentage: '+${s.percentage}"></h2>
+		</div>
+	</div>
+	<hr>
+
+	<div align="center"> -->
+	<!-- <table border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>NAME</th>
+					<th>MOBILE</th>
+					<th>EMAIL</th>
+					<th>PERCENTAGE</th>
+				</tr>
+			</thead>
+			<tbody> -->
+	<!-- <tr th:each="s:${student}" align="center">
+					<th th:text="${s.id}"></th>
+					<th th:text="${s.name}"></th>
+					<th th:text="${s.mobile}"></th>
+					<th th:text="${s.email}"></th>
+					<th th:text="${s.percentage}"></th>
+				</tr>
+			</tbody>
+		</table>
+	</div> -->
+
+
+	<div align="center">
+		<form action="/fetch">
+			<input type="text" name="search">
+			<button>Search</button>
+		</form>
+		<br> <br>
+
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Mobile</th>
+			<th>Email</th>
+			<th>percentage</th>
+			<th>Edit</th>
+			<th>delete</th>
+
+		</tr>
+		<tr th:each="s:${students}" align="center">
+			<td th:text="${s.id}"></td>
+			<td th:text="${s.name}"></td>
+			<td th:text="${s.mobile}"></td>
+			<td th:text="${s.email}"></td>
+			<td th:text="${s.percentage}"></td>
+
+			<td><a th:href="'/edit/'+${s.id}"><button>Edit</button></a> <a
+				th:href="'/delete/'+${s.id}"><button>Delete</button></a></td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<a href="/"><button>back</button></a>
+</div>
+</body>
+</html>

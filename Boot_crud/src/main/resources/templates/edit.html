@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>update here</title>
+</head>
+<body>
+ <div align="center">
+<h1>update record</h1>
+	<form action="/update" method="post">
+	<input type="hidden" name="id"  th:value="${student.id}">
+	Name:<input type="text" name="name"  th:value="${student.name}">
+	mobile:<input type="tel" name="mobile"  th:value="${student.mobile}">
+	email:<input type="email" name="email"  th:value="${student.email}">
+	percentage:<input type="number" name="percentage"  th:value="${student.percentage}">
+
+	<button>Update</button>
+	</form>
+	<br>
+	<br>
+			<a href="/fetch"><button>Back</button></a>
+		</div>	
+</body>
+</html>
